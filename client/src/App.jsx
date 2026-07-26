@@ -3,6 +3,9 @@ import Form from "./Form";
 import Blogs from "./Blogs";
 import useFetchData from "./useFetch";
 
+// css
+import "./globals.css";
+
 function App() {
   // =====================================
   // State

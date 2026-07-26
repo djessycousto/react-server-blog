@@ -1,0 +1,11 @@
+@import url("https://use.typekit.net/lmc7mjb.css");
+
+body {
+  font-family: "liberation-serif", Georgia, "Times New Roman", serif;
+  background: var(--clr-background);
+  color: var(--clr-text);
+}
+
+button {
+  cursor: pointer;
+}

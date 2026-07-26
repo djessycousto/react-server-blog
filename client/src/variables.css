@@ -1,0 +1,28 @@
+@import url("https://use.typekit.net/lmc7mjb.css");
+
+:root {
+  --clr-primary: #2563eb;
+  --clr-background: #f8fafc;
+  --clr-text: #1f2937;
+
+  --radius: 8px;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+
+  /* color */
+
+  --color1: #303e51;
+  --color2: #5c5f61;
+  --color3: #c4c6cd;
+  --color4: #44474c;
+  --primary-color: #fff;
+  --secondary-color: #111c2d;
+
+  --max-width: 1090px;
+  /* title h1,h2,h3 */
+  --bigTitleText: 48px;
+  --mediumTitleText: 32px;
+  --smallTitleText: 24px;
+}
