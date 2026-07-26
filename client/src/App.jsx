@@ -1,55 +1,26 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Form from "./Form";
 import Blogs from "./Blogs";
+import useFetchData from "./useFetch";
 
 function App() {
   // =====================================
   // State
   // =====================================
 
-  const [items, setItems] = useState([]);
   const [editingBlog, setEditingBlog] = useState(null);
-  const [loading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
 
   // =====================================
   // Constants
   // =====================================
 
   const url = "http://localhost:8080/blogs";
+  const { loading, error, items, fetchData, setError, setIsLoading } =
+    useFetchData(url);
 
-  // =====================================
-  // Fetch Blogs
-  // =====================================
-
-  const fetchData = async () => {
-    setIsLoading(true);
-
-    try {
-      const resp = await fetch(url);
-
-      if (!resp.ok) {
-        setError("Something went wrong while fetching.");
-        return;
-      }
-
-      const data = await resp.json();
-
-      setItems(data.blogs);
-    } catch (error) {
-      setError("Something went wrong.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  // =====================================
-  // Initial Fetch
-  // =====================================
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // // =====================================
+  // // Fetch Blogs // moved to a custom hook
+  // // =====================================
 
   // =====================================
   // Create Blog
