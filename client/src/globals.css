@@ -1,5 +1,8 @@
 @import url("https://use.typekit.net/lmc7mjb.css");
 
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "liberation-serif", Georgia, "Times New Roman", serif;
   background: var(--clr-background);
@@ -8,4 +11,89 @@ body {
 
 button {
   cursor: pointer;
+}
+
+main {
+  max-width: var(--max-width);
+  width: 100%;
+}
+
+/*
+ ====== Form =====  
+ */
+
+form {
+  max-width: 620px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 48px;
+  gap: 32px;
+  border: var(--form-border);
+}
+
+input {
+  font: inherit;
+  border: none;
+  outline: none;
+  appearance: none;
+}
+
+input[type="text"] {
+  border-bottom: var(--form-border);
+  padding: 12px 0;
+  &::placeholder {
+    font-size: 16px;
+  }
+}
+
+textarea {
+  width: 100%;
+  min-height: 173px;
+  padding: 12px 0;
+  line-height: 1.7;
+  resize: none;
+  border: none;
+  border-bottom: var(--form-border);
+
+  &::placeholder {
+    font-size: 16px;
+  }
+}
+
+textarea:focus {
+  border: none;
+  stroke: none;
+  appearance: none;
+  outline: none;
+  border-bottom: var(--form-border);
+}
+
+/* textarea {
+  width: 100%;
+  min-height: 173px;
+  padding: 12px 0;
+  line-height: 1.7;
+  resize: none; */
+/* border-bottom: var(--form-border); */
+/* border-color: unset; */
+/* } */
+
+/* textarea:focus {
+  border: none;
+  outline: none;
+  appearance: none; */
+/* border-bottom: var(--form-border); */
+/* } */
+
+/* btn  */
+
+input[type="submit"] {
+  width: 205px;
+  padding: 12px;
+  /* border: none; */
+  /* appearance: none; */
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
