@@ -144,46 +144,51 @@ const Form = ({
   // =====================================
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="title"
-        value={blogInput.title}
-        onChange={handleChange}
-        placeholder="Title"
-      />
+    <>
+      <section className="section-form">
+        <h2>New Post</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="author"
+            value={blogInput.author}
+            onChange={handleChange}
+            placeholder="Your name or pseudonym"
+          />
 
-      <input
-        type="text"
-        name="author"
-        value={blogInput.author}
-        onChange={handleChange}
-        placeholder="Author"
-      />
+          <input
+            type="text"
+            name="title"
+            value={blogInput.title}
+            onChange={handleChange}
+            placeholder="Title of your piece"
+          />
 
-      <textarea
-        name="blogPost"
-        value={blogInput.blogPost}
-        onChange={handleChange}
-        placeholder="Blog post"
-      />
+          <textarea
+            name="blogPost"
+            value={blogInput.blogPost}
+            onChange={handleChange}
+            placeholder="The floor is yours..."
+          />
 
-      <input
-        type="submit"
-        value={editingBlog ? "Update" : "Create"}
-        disabled={loading}
-      />
+          <input
+            type="submit"
+            value={editingBlog ? "Update the journal" : "Publish to journal"}
+            disabled={loading}
+          />
 
-      {editingBlog && (
-        <button type="button" onClick={resetForm}>
-          Cancel
-        </button>
-      )}
+          {editingBlog && (
+            <button type="button" onClick={resetForm}>
+              Cancel
+            </button>
+          )}
 
-      {formError && <div className="message error">{formError}</div>}
+          {formError && <div className="message error">{formError}</div>}
 
-      {formSuccess && <div className="message success">{formSuccess}</div>}
-    </form>
+          {formSuccess && <div className="message success">{formSuccess}</div>}
+        </form>
+      </section>
+    </>
   );
 };
 

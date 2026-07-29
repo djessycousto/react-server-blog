@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   font-family: "liberation-serif", Georgia, "Times New Roman", serif;
@@ -22,15 +24,22 @@ main {
  ====== Form =====  
  */
 
-form {
+.section-form {
   max-width: 620px;
+  width: 100%;
+  border: var(--form-border);
+  margin: 0 auto 64px auto;
+  padding: 48px;
+  background-color: var(--clr-background);
+}
+
+form {
   width: 100%;
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 48px;
+
   gap: 32px;
-  border: var(--form-border);
 }
 
 input {
@@ -43,6 +52,7 @@ input {
 input[type="text"] {
   border-bottom: var(--form-border);
   padding: 12px 0;
+  background-color: unset;
   &::placeholder {
     font-size: 16px;
   }
@@ -56,6 +66,7 @@ textarea {
   resize: none;
   border: none;
   border-bottom: var(--form-border);
+  background-color: unset;
 
   &::placeholder {
     font-size: 16px;
@@ -96,4 +107,77 @@ input[type="submit"] {
   /* appearance: none; */
   background-color: var(--secondary-color);
   color: var(--primary-color);
+  /* this make equal the distance the gap on top of the btn and the frame which is 48 */
+  margin-top: 16px;
+}
+
+/* The blog part */
+
+.block-post__container {
+  max-width: 620px;
+  width: 100%;
+  margin: auto;
+  padding-top: 56px;
+}
+
+.block-post__container__tag {
+  /* width: 10 0px; */
+
+  padding-bottom: 48px;
+  text-transform: uppercase;
+  padding: 4px 0;
+  position: relative;
+}
+
+.block-post__container__tag div {
+  /* padding: 12px 0;; */
+  background-color: rgb(255, 255, 255);
+  display: inline-block;
+  padding-right: 16px;
+}
+
+.block-post__container__tag div::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 0;
+  left: 0;
+  height: 1px;
+  border-bottom: 1px solid rgb(13, 255, 29);
+  background-color: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+
+.block-post__container__date {
+  font-size: 14px;
+  font-weight: normal;
+  border: 1px solid rgb(52, 13, 13);
+}
+
+.block-post__container__title {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  border: 1px solid red;
+}
+
+.block-post__container__author {
+  font-size: 12px;
+  font-weight: bolder;
+  font-style: italic;
+  color: var(--third-color);
+}
+
+.block-post__container__post {
+  /* line-height: 26; */
+}
+
+.block-post__container__btn {
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 1px solid var(--primary-color);
 }

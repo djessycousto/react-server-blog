@@ -2,8 +2,6 @@ import Blog from "./Blog";
 const Blogs = ({ items, updateBlog, deleteBlog, isEdit }) => {
   return (
     <>
-      <h2>Blog area </h2>
-
       {items.map((item) => {
         return (
           <Blog
