@@ -6,9 +6,12 @@
 
   --radius: 8px;
 
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 2rem;
+  --spacing-Xsm: 8px;
+  --spacing-sm: 12px;
+  --spacing-sm-Extra: 24px;
+  --spacing-md: 36px;
+  --spacing-lg: 48px;
+  --spacing-xlg: 56px;
 
   /* color */
 
