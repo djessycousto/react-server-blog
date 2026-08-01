@@ -9,6 +9,7 @@
 /* Remove default margin */
 * {
   margin: 0;
+  padding: 0;
 }
 
 /* Allow percentage-based heights */

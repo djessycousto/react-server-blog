@@ -21,6 +21,8 @@
   --primary-color: #fff;
   --secondary-color: #303e51;
 
+  /*   --max-width: 68rem;
+ */
   --max-width: 1090px;
   /* title h1,h2,h3 */
   --bigTitleText: 48px;

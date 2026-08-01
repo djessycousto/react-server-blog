@@ -1,7 +1,10 @@
 import { useState } from "react";
+// import{ }
 import Form from "./Form";
 import Blogs from "./Blogs";
+import Navbar from "./navbar/Navbar";
 import useFetchData from "./useFetch";
+import "./reset.css";
 import "./variables.css";
 import "./globals.css";
 
@@ -88,7 +91,11 @@ function App() {
 
   return (
     <>
-      <h2>Welcome to my Blog</h2>
+      <Navbar />
+      <section className="intro">
+        <h2>Quiet Thoughts.</h2>
+        <p>A space for deliberate words, deep focus, and editorial clarity.</p>
+      </section>
 
       {/* Loading message */}
       {loading && <h3>Loading...</h3>}
