@@ -1,4 +1,3 @@
-// import "navbar/nav.css";
 import "../navbar/nav.css";
 
 const Navbar = () => {

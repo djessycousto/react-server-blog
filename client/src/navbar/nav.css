@@ -20,8 +20,9 @@ nav {
   margin: auto;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 
   padding: 24px;
 }
@@ -44,8 +45,31 @@ nav {
 .nav-hamb-container span {
   display: block;
   width: 22px;
-  height: 3px;
-  background: var(--secondary-color);
+  height: 2px;
+  background-color: var(--secondary-color);
+  position: relative;
+}
+
+.nav-hamb-container span::before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 2px;
+  position: absolute;
+  left: -5px;
+  top: 8px;
+  background-color: var(--secondary-color);
+}
+
+.nav-hamb-container span::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 2px;
+  position: absolute;
+  left: -3px;
+  top: -8px;
+  background-color: var(--secondary-color);
 }
 
 /* Navigation Overlay */
@@ -66,6 +90,13 @@ nav {
 
 .showNav {
   display: block;
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: var(--clr-background);
 }
 
 /* Close Button */

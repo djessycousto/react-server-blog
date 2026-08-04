@@ -4,12 +4,14 @@ import Form from "./Form";
 import Blogs from "./Blogs";
 import Navbar from "./navbar/Navbar";
 import useFetchData from "./useFetch";
+import Footer from "./footer/Footer";
+
 import "./reset.css";
 import "./variables.css";
 import "./globals.css";
 
 // css
-import "./globals.css";
+// import "./globals.css";
 
 function App() {
   // =====================================
@@ -115,6 +117,7 @@ function App() {
 
       {/* Blog List */}
       <Blogs items={items} deleteBlog={deleteBlog} updateBlog={updateBlog} />
+      <Footer />
     </>
   );
 }

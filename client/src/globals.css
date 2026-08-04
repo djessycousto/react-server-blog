@@ -118,8 +118,7 @@ input[type="submit"] {
 /* The blog part */
 
 .block-post__container {
-  max-width: 620px;
-  width: 100%;
+  width: min(100% - 2rem, 38rem);
   margin: auto;
   padding-top: 56px;
 }
