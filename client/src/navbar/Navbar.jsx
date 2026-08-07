@@ -29,13 +29,13 @@ const Navbar = () => {
 
           <ul className="navList-container ">
             <li>
-              <a href="">Essays</a>
+              <a href="/app">Essays</a>
             </li>
             <li>
-              <a href="">Archives</a>
+              <a href="/Archives">Archives</a>
             </li>
             <li>
-              <a href="">About</a>
+              <a href="/about">About</a>
             </li>
           </ul>
         </div>
