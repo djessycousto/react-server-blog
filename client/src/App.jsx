@@ -1,14 +1,17 @@
 import { useState } from "react";
-// import{ }
+import { Routes, Route } from "react-router-dom";
 import Form from "./Form";
 import Blogs from "./Blogs";
 import Navbar from "./navbar/Navbar";
 import useFetchData from "./useFetch";
 import Footer from "./footer/Footer";
+import Home from "./pages/Home";
 
 import "./reset.css";
 import "./variables.css";
 import "./globals.css";
+import Archives from "./pages/Archives";
+import About from "./pages/About";
 
 // css
 // import "./globals.css";
@@ -94,29 +97,31 @@ function App() {
   return (
     <>
       <Navbar />
-      <section className="intro">
-        <h2>Quiet Thoughts.</h2>
-        <p>A space for deliberate words, deep focus, and editorial clarity.</p>
-      </section>
+      {/* route */}
+      <Routes>
+        {/* HOME */}
+        <Route
+          path="/"
+          element={
+            <Home
+              loading={loading}
+              error={error}
+              createBlog={createBlog}
+              editingBlog={editingBlog}
+              setEditingBlog={setEditingBlog}
+              fetchData={fetchData}
+              setError={setError}
+              items={items}
+              deleteBlog={deleteBlog}
+              updateBlog={updateBlog}
+            />
+          }
+        />
+        {/* Archives */}
+        <Route path="/about" element={<About />} />
+        <Route path="/archives" element={<Archives />} />
+      </Routes>
 
-      {/* Loading message */}
-      {loading && <h3>Loading...</h3>}
-
-      {/* Error message */}
-      {error && <h3>{error}</h3>}
-
-      {/* Blog Form */}
-      <Form
-        createBlog={createBlog}
-        editingBlog={editingBlog}
-        setEditingBlog={setEditingBlog}
-        fetchData={fetchData}
-        setError={setError}
-        loading={loading}
-      />
-
-      {/* Blog List */}
-      <Blogs items={items} deleteBlog={deleteBlog} updateBlog={updateBlog} />
       <Footer />
     </>
   );
