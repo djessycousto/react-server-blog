@@ -42,7 +42,7 @@ main {
 
   /* width: 100%; */
   /* this is fantastic  */
-  width: min(100% - 2rem, 38rem);
+  width: var(--min-width);
   border: var(--form-border);
   /* margin-block: 0 auto clamp(2rem, 1rem+3vw, 4rem) auto; */
   margin: 0 auto 4rem auto;
