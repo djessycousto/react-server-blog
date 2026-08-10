@@ -14,6 +14,8 @@ function Home({
   deleteBlog,
   updateBlog,
 }) {
+  // reduce blog to 5 only
+
   // =====================================
   // JSX
   // =====================================

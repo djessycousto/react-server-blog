@@ -119,7 +119,7 @@ function App() {
         />
         {/* Archives */}
         <Route path="/about" element={<About />} />
-        <Route path="/archives" element={<Archives />} />
+        <Route path="/archives" element={<Archives items={items} />} />
       </Routes>
 
       <Footer />

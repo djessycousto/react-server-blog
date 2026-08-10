@@ -1,16 +1,31 @@
-const Blog = ({ item, updateBlog, deleteBlog, editingBlog }) => {
-  const { id, title, author, blogPost } = item;
+const Blog = ({
+  item,
+  updateBlog,
+  deleteBlog,
+  editingBlog,
+  recentDateMonth,
+  year,
+}) => {
+  const { id, title, author, blogPost, date } = item;
+  const blogMonth = date.split(" ")[0];
+  const blogYear = date.split(" ")[1];
+
   return (
     <>
       <section className="block-post__container ">
         <div className="block-post__container__tag">
           <div>
-            <p>Recent Post</p>
+            {/* not working just archives shown  */}
+            {year === blogYear && recentDateMonth === blogMonth ? (
+              <p>Recent Post</p>
+            ) : (
+              <p>Archives Post</p>
+            )}
           </div>
           <div className="line"></div>
         </div>
         <article>
-          <p className="block-post__container__date">JANUARY 14, 2026</p>
+          <p className="block-post__container__date">{date}</p>
           <h3 className="block-post__container__title">{title}</h3>
           <p className="block-post__container__author">By {author}</p>
           <p className="block-post__container__post">{blogPost}</p>
