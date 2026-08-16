@@ -1,0 +1,11 @@
+// const yearSorted = numericYear.sort(function (a, b) {
+//   a - b;
+// });
+
+// sort date
+
+// const yearSorted = [...year].map((yearS) => {
+//   return yearS.sort(function (a, b) {
+//     a - b;
+//   });
+// });

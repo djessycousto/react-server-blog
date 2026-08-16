@@ -20,6 +20,7 @@ main {
 .intro {
   text-align: center;
   padding: 64px;
+  color: var(--secondary-color);
 }
 
 .intro h2 {
@@ -55,8 +56,20 @@ form {
   display: flex;
   flex-direction: column;
   margin: auto;
+  /* padding-bottom: 32px; */
 
-  gap: 32px;
+  /* gap: 32px; */
+}
+
+.section-form h2 {
+  padding-bottom: 32px;
+}
+
+.label {
+  color: black;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 16px 0;
 }
 
 input {
@@ -68,7 +81,7 @@ input {
 
 input[type="text"] {
   border-bottom: var(--form-border);
-  padding: 12px 0;
+  padding: 16px 0;
   background-color: unset;
   &::placeholder {
     font-size: 16px;
@@ -184,4 +197,31 @@ input[type="submit"] {
   font-size: 12px;
   font-weight: bold;
   border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--clr-text);
+  color: var(--clr-text);
+}
+
+/* add more btn */
+.addMoreBtn-container {
+  max-width: 38rem;
+  width: var(--min-width);
+  margin: 48px auto 0 auto;
+}
+.addMoreBtn {
+  display: block;
+  margin: auto;
+  background: none;
+  appearance: none;
+  border: none;
+  text-transform: capitalize;
+  padding: 8px;
+  font-style: italic;
+  font-weight: lighter;
+  color: var(--third-color);
+  transition: color 100s;
+}
+
+.addMoreBtn:hover {
+  color: var(--accent-color);
 }

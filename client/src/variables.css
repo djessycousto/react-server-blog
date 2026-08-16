@@ -27,7 +27,9 @@
 
   /* responsive min-width */
 
-  --min-width: min(100% - 2rem, 38rem) /* title h1,h2,h3 */ --bigTitleText: 48px;
+  --min-width: min(100% - 2rem, 38rem);
+  /* title h1,h2,h3 */
+  --bigTitleText: 48px;
   --mediumTitleText: 32px;
   --smallTitleText: 24px;
   --form-border: 1px solid var(--clr-text);

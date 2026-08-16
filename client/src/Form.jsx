@@ -148,6 +148,9 @@ const Form = ({
       <section className="section-form">
         <h2>New Post</h2>
         <form onSubmit={handleSubmit}>
+          <label className="label" htmlFor="author">
+            author Name
+          </label>
           <input
             type="text"
             name="author"
@@ -155,7 +158,9 @@ const Form = ({
             onChange={handleChange}
             placeholder="Your name or pseudonym"
           />
-
+          <label className="label" htmlFor="title">
+            Blog Title
+          </label>
           <input
             type="text"
             name="title"
@@ -163,7 +168,9 @@ const Form = ({
             onChange={handleChange}
             placeholder="Title of your piece"
           />
-
+          <label className="label" htmlFor="blogPost">
+            Post content
+          </label>
           <textarea
             name="blogPost"
             value={blogInput.blogPost}

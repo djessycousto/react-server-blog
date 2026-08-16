@@ -8,9 +8,9 @@ const Blogs = ({ items, updateBlog, deleteBlog, isEdit }) => {
   const [visibleBlog, setVisibleBlog] = useState(5); // to show only 5 at time
   // const [hasMore, setHasMore] = useState(true);
   const visibleItems = items.slice(0, visibleBlog); //
-  const hasMore = visibleBlog < items.length; // how this work
+  const hasMore = visibleBlog < items.length; //
 
-  // why we dont use use eefect
+  // why we don't use use effect
   // useEffect(() => {
   //   setHasMore(visibleBlog > items.length);
   // }, [visibleBlog, items.length]); sorry i am confused
@@ -78,7 +78,6 @@ const Blogs = ({ items, updateBlog, deleteBlog, isEdit }) => {
               <div className="line"></div>
             </div>
           </div>
-          <div className="count">{visibleItems.length}</div>
           {recentPosts
             // .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
             .map((item) => {
@@ -120,7 +119,13 @@ const Blogs = ({ items, updateBlog, deleteBlog, isEdit }) => {
       )}
 
       {/* btn  */}
-      {hasMore && <button onClick={handleLoadMore}>add more</button>}
+      <div className="addMoreBtn-container">
+        {hasMore && (
+          <button className="addMoreBtn" onClick={handleLoadMore}>
+            add more
+          </button>
+        )}
+      </div>
     </>
   );
 };

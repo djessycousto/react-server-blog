@@ -21,7 +21,7 @@ function App() {
   // State
   // =====================================
 
-  const [editingBlog, setEditingBlog] = useState(null);
+  const [editingBlog, setEditingBlog] = useState(null); // editing
 
   // =====================================
   // Constants
